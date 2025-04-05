@@ -1,0 +1,109 @@
+.gallerybody {
+  text-align: center;
+  background-color: #0d0d0d;
+  color: white;
+  padding: 20px;
+}
+
+/* Glowing Header */
+.gallery-glowing-header {
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  border-radius: 40px;
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.8), 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+/* Image Grid */
+.gallery-image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Forces a 3-column layout */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+@media (max-width: 1024px) {
+  .gallery-image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-image-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Image Box */
+.gallery-image-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Ensures images remain square */
+}
+
+.gallery-image-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 1), 0 0 15px rgba(0, 255, 255, 1);
+}
+
+/* Images should be square */
+.gallery-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images fill the square without distortion */
+}
+
+/* Image Overlay */
+.gallery-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-image-box:hover .gallery-image-overlay {
+  opacity: 1;
+}
+
+/* Video Section */
+.gallery-video-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.gallery-video-section video {
+  width: 90%;
+  max-width: 1800px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 1), 0 0 15px rgba(0, 255, 255, 1);
+}
+
+.gallery-subtitle {
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.5; /* Adjust line spacing */
+}

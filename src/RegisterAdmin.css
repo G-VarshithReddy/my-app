@@ -1,0 +1,91 @@
+/* Full Page Centering */
+.admin-register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1c1e2e; /* Dark Background */
+}
+
+/* Title Styling */
+.title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Form Box */
+.admin-register-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    text-align: center;
+}
+
+/* Top Banner with Gradient */
+.admin-register-title {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Tech Gradient */
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+/* Input Field Container */
+.input-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+/* Labels */
+.admin-register-box label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+/* Input Fields */
+.admin-register-input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+/* Add shadow effect when hovering over input fields */
+.admin-register-input:hover, 
+.admin-register-input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px rgba(106, 17, 203, 0.7); /* Purple Glow */
+}
+
+/* Register Button with Gradient */
+.admin-register-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Tech Gradient */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Hover Effect */
+.admin-register-btn:hover {
+    background: linear-gradient(135deg, #5b0ead, #1e6bff); /* Slightly Darker Gradient */
+}

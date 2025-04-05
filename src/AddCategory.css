@@ -1,0 +1,201 @@
+/* Modern Add Category Styles */
+.ac-container {
+    min-height: 100vh;
+    background: #13131A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.ac-form-wrapper {
+    width: 100%;
+    max-width: 550px;
+    background: rgba(28, 28, 36, 0.9);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.ac-form-wrapper:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 
+        0 0 30px rgba(255, 255, 255, 0.2),
+        0 0 60px rgba(255, 255, 255, 0.1),
+        inset 0 0 30px rgba(255, 255, 255, 0.05);
+    background: rgba(28, 28, 36, 0.95);
+}
+
+.ac-title {
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+    color: white;
+    padding: 1.5rem;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+}
+
+form {
+    padding: 2rem;
+}
+
+.ac-form-group {
+    margin-bottom: 1.75rem;
+}
+
+.ac-label {
+    display: block;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.ac-input,
+.ac-textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.ac-input:hover,
+.ac-textarea:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 
+        0 0 30px rgba(255, 255, 255, 0.25),
+        0 0 50px rgba(255, 255, 255, 0.15),
+        inset 0 0 15px rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.ac-input:focus,
+.ac-textarea:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 
+        0 0 35px rgba(255, 255, 255, 0.3),
+        0 0 70px rgba(255, 255, 255, 0.2),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.ac-textarea {
+    min-height: 120px;
+    resize: none;
+    font-family: inherit;
+}
+
+.ac-input::placeholder,
+.ac-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.ac-submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.ac-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.ac-submit-btn:active {
+    transform: translateY(1px);
+}
+
+.ac-error,
+.ac-success {
+    margin: 1rem 0;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    animation: messageSlide 0.3s ease-out;
+}
+
+@keyframes messageSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ac-error {
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 107, 107, 0.2);
+    color: #FF6B6B;
+}
+
+.ac-success {
+    background: rgba(46, 213, 115, 0.1);
+    border: 1px solid rgba(46, 213, 115, 0.2);
+    color: #2ed573;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ac-container {
+        padding: 1rem;
+    }
+
+    .ac-form-wrapper {
+        max-width: 100%;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+
+    .ac-title {
+        font-size: 1.8rem;
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ac-form-wrapper {
+        border-radius: 15px;
+    }
+
+    .ac-title {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    .ac-input,
+    .ac-textarea,
+    .ac-submit-btn {
+        padding: 0.8rem;
+    }
+}

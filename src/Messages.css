@@ -1,0 +1,134 @@
+.messages-container {
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.messages-title {
+  text-align: center;
+  color: #2d3436;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.messages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.message-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.message-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.message-id {
+  color: #6c5ce7;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.message-email {
+  color: #2d3436;
+  font-weight: 500;
+}
+
+.message-content {
+  margin: 1rem 0;
+}
+
+.message-content p {
+  color: #2d3436;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.password-field {
+  background: #f8f9fa;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+.password-label {
+  color: #6c5ce7;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.password-value {
+  color: #2d3436;
+}
+
+.message-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid #f0f0f0;
+}
+
+.delete-btn {
+  background: #ff7675;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #d63031;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #2d3436;
+  padding: 2rem;
+}
+
+.error {
+  text-align: center;
+  color: #d63031;
+  background: #ffe3e3;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem;
+}
+
+@media (max-width: 768px) {
+  .messages-container {
+    padding: 1rem;
+  }
+
+  .messages-title {
+    font-size: 2rem;
+  }
+
+  .messages-grid {
+    grid-template-columns: 1fr;
+  }
+} 

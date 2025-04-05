@@ -1,0 +1,145 @@
+.container {
+    max-width: 90%;
+    margin: auto;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff9800, #ff5722);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  th {
+    background: #ff9800;
+    color: white;
+    padding: 10px;
+  }
+  
+  td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #0a0a0a;
+  }
+  
+  tr:hover {
+    background: #f5f5f5;
+  }
+  
+  img {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+  }
+  th, td {
+    color: black !important;
+  }
+  
+.bookings-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bookings-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.bookings-table-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow-x: auto;
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.bookings-table th,
+.bookings-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.bookings-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.bookings-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.users-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.users-list li {
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.users-list li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 2rem;
+}
+
+.error-message {
+  text-align: center;
+  color: #dc3545;
+  padding: 2rem;
+  font-size: 1.2rem;
+  background: rgba(220, 53, 69, 0.1);
+  border-radius: 8px;
+  margin: 1rem;
+}
+
+@media (max-width: 768px) {
+  .bookings-container {
+    padding: 1rem;
+  }
+
+  .bookings-table th,
+  .bookings-table td {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .users-list li {
+    font-size: 0.8rem;
+  }
+}
+  
+  

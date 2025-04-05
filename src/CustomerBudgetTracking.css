@@ -1,0 +1,311 @@
+.customer-budget-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.budget-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.budget-header h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.budget-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+.budget-content {
+  display: grid;
+  gap: 2rem;
+}
+
+.budget-form-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.budget-form-section h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.budget-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.form-group input {
+  padding: 0.8rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2c3e50;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.submit-button {
+  background-color: #3498db;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+}
+
+.budget-summary-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.budget-summary-section h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.budget-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.budget-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.budget-card i {
+  font-size: 2rem;
+  color: #3498db;
+}
+
+.card-content h3 {
+  color: #7f8c8d;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.budget-chart-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.budget-chart-section h2 {
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.chart-container {
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Make sure the chart canvas is centered */
+canvas {
+  margin: 0 auto !important;
+  max-height: 100% !important;
+}
+
+/* Ensure tooltip text is very visible */
+.chartjs-tooltip {
+  background: rgba(0, 0, 0, 0.9) !important;
+  padding: 1rem !important;
+  border-radius: 8px !important;
+  font-weight: bold !important;
+  color: black !important; /* Changed from white to black */
+}
+
+.events-list-section {
+  color: black;
+  background: rgb(203, 142, 142);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.events-list-section h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.events-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.event-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(199, 57, 145, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(219, 80, 196, 0.1);
+}
+
+.event-info h3.event-name {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.event-detail {
+  color: #34495e;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.event-detail i {
+  color: #3498db;
+  width: 20px;
+}
+
+.event-detail.total {
+  color: #2c3e50;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Removing spacing issue */
+.event-events-info {
+  color: black !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Delete button styling */
+.delete-button {
+  background-color: #e74c3c;
+  color: black;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0 !important;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.delete-button:hover {
+  background-color: purple !important;
+  color: white !important;
+}
+
+.event-card:hover .delete-button {
+  z-index: 20;
+}
+
+.no-events {
+  text-align: center;
+  color: #7f8c8d;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .customer-budget-container {
+    padding: 1rem;
+  }
+
+  .budget-header h1 {
+    font-size: 2rem;
+  }
+
+  .budget-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .delete-button {
+    width: 100%;
+    position: static;
+  }
+
+  .chart-container {
+    padding: 1rem;
+    height: 400px !important;
+  }
+  
+  .budget-chart-section h2 {
+    font-size: 1.5rem;
+  }
+}

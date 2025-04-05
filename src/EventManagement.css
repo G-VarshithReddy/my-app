@@ -1,0 +1,320 @@
+/* Modern Event Management Styles */
+.event-management-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a2e, #2e2e4a);
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.event-management-container h1 {
+  text-align: center;
+  color: #f5f5f7;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
+  padding-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.event-management-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 5px;
+  background: linear-gradient(90deg, #00ddeb, #7b2cbf);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 221, 235, 0.5);
+}
+
+/* Grid Layout for Events */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2.5rem;
+}
+
+/* Event Card Styling */
+.event-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 24px;
+  padding: 2.5rem;
+  min-height: 500px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: #ffffff !important;
+  transition: all 0.4s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.event-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.event-card:hover::before {
+  opacity: 1;
+}
+
+.event-card:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3),
+              0 0 30px rgba(255, 255, 255, 0.2),
+              0 0 45px rgba(255, 255, 255, 0.1),
+              inset 0 0 15px rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.event-card::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 24px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1)
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.event-card:hover::after {
+  opacity: 1;
+}
+
+/* Image Section */
+.event-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.event-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover .event-image {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Event Details Section - Ensuring Equal Height */
+.event-details {
+  background: transparent !important;
+  border: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #ffffff !important;
+}
+
+.event-name {
+  color: #ffffff !important;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.event-category,
+.event-location,
+.event-tickets,
+.event-price,
+.event-date {
+  color: #ffffff !important;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.event-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+/* Action Buttons */
+.update-btn, .delete-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  position: relative;
+  z-index: 20;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.update-btn {
+  background: linear-gradient(45deg, #00ddeb, #7b2cbf);
+  color: #fff !important;
+}
+
+.delete-btn {
+  background: linear-gradient(45deg, #ff2e63, #ff6b6b);
+  color: #fff !important;
+}
+
+.update-btn:hover, .delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.update-btn:active, .delete-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Override any potential conflicting styles */
+.event-card * {
+  color: #ffffff !important;
+}
+
+/* Exception for buttons */
+.update-btn *, .delete-btn * {
+  color: #fff !important;
+  pointer-events: none;
+}
+
+.update-btn, .delete-btn {
+  pointer-events: auto !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .event-management-container {
+    padding: 1rem;
+  }
+
+  .event-management-container h1 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .event-card {
+    min-height: 450px;
+    padding: 2rem;
+  }
+
+  .event-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .event-name {
+    font-size: 2rem;
+  }
+
+  .event-info,
+  .event-location,
+  .event-date,
+  .event-price,
+  .event-tickets {
+    font-size: 1.1rem;
+  }
+
+  .update-btn, .delete-btn {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-management-container h1 {
+    font-size: 2rem;
+  }
+
+  .event-card {
+    padding: 1.5rem;
+    min-height: 400px;
+  }
+
+  .event-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .event-name {
+    font-size: 1.8rem;
+  }
+
+  .event-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .update-btn, .delete-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.event-card > div {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
